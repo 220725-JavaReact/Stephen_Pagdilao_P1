@@ -38,11 +38,11 @@ public class ConnectionUtil {
             //I've loaded the property file from my resource folder for my prop object to use
             //We have to change from a hard coded path of the database.properties into an included method called getResourceAsStream()
             //  to dynamically point to our resources folder and pick a file there
-            prop.load(ConnectionUtil.class.getResourceAsStream("/database.properties"));
+            // prop.load(ConnectionUtil.class.getResourceAsStream("/database.properties"));
 
-            url = prop.getProperty("url");
-            user = prop.getProperty("user");
-            pass = prop.getProperty("pass");
+            url = System.getenv("url");
+            user = System.getenv("user");
+            pass = System.getenv("pass");
 
             con = DriverManager.getConnection(url, user, pass);
 
