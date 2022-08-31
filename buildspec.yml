@@ -1,10 +1,10 @@
 version: 0.2
 
 phases:
-  # Build phase is running a bunch of CLI commands to build our .tar file
+  # Build phase is running a bunch of CLI commands to build our .war file
   build:
     commands:
-      - echo "Building a .tar file"
+      - echo "Building a .war file"
       - java -version
       - mvn clean package
 
