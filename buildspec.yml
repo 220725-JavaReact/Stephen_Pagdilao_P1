@@ -7,6 +7,11 @@ phases:
       - echo "Building a .war file"
       - java -version
       - mvn clean package
+  post_build:
+    commands:
+      - echo "We are testing and sending a report to SonarCloud"
+      - mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar
+
 
 # This is the files that we are going to send to our elastic beanstalk
 # We are sending the Dockerfile and everything that got generated using "mvn clean package"

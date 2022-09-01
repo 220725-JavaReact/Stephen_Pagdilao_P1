@@ -86,3 +86,17 @@
     * hence we usually denote them as CI/CD since both are needed to really follow DevOps culture
 * However, there is a **release manage that will check on everything before delivering to the users**
 
+# Introduction to Code Analysis
+* A further way for a computer to analyze your code to ensure you are following good coding practices and also gives a direction on certain things you might want to change.
+* Does not actually check if the features/functions are working on your app
+* It will perform a **static code analysis**
+    * It will check your code without running it and just scanning your java files and seeing any patterns that might be bad coding practices
+
+## SonarCloud
+* An online platform that helps stores all of our code analysis
+## Terminology
+* Code Smells - They check how properly coded your application is
+    * Ex: Creating a variable that was never used, having commented out code, unused imports, etc.
+* Bugs - They have a chance that will break your application entirely and should be handled quickly
+    * Hence when an application crashed we mostly say it is probably cause of a bug in the program
+* Code Coverage - How much lines of your code is tested by a unit test

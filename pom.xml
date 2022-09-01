@@ -17,6 +17,12 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
+
+    <sonar.projectName>Stephen Pagdilao P1 Analysis</sonar.projectName>
+    <sonar.login>${sonar_token}</sonar.login>
+    <sonar.organization>220725-javareact</sonar.organization>
+    <sonar.projectKey>220725-JavaReact_Stephen_Pagdilao_P1</sonar.projectKey>
+    <sonar.host.url>https://sonarcloud.io/</sonar.host.url>
   </properties>
 
   <dependencies>
@@ -65,12 +71,14 @@
           <version>3.0.2</version>
         </plugin>
         <plugin>
+          <!-- Change to 3.8.1 for Code analysis -->
           <artifactId>maven-compiler-plugin</artifactId>
-          <version>3.8.0</version>
+          <version>3.8.1</version>
         </plugin>
         <plugin>
+          <!-- Change to 3.0.0-M6 for Code Analysis -->
           <artifactId>maven-surefire-plugin</artifactId>
-          <version>2.22.1</version>
+          <version>3.0.0-M6</version>
         </plugin>
         <plugin>
           <artifactId>maven-war-plugin</artifactId>
