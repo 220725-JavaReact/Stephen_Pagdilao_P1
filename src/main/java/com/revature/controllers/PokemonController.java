@@ -10,7 +10,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.revature.dao.Dao;
 import com.revature.dao.PokemonDao;
 import com.revature.models.Pokemon;
 import com.revature.services.PokemonService;
