@@ -124,7 +124,7 @@ public class PokemonController extends HttpServlet{
     }
 
     private void setAccessControlHeaders(HttpServletResponse resp){
-        resp.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");
+        resp.setHeader("Access-Control-Allow-Origin", "*");
         resp.setHeader("Access-Control-Allow-Methods", "GET");
     }
 }
