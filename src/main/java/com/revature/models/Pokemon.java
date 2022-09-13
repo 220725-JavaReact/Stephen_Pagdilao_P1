@@ -4,20 +4,30 @@ package com.revature.models;
 public class Pokemon {
     private int id;
     private String name;
+    private String img;
     private int level;
     private int health;
     private int damage;
 
     public Pokemon() { }
 
-    public Pokemon(int id, String name, int level, int health, int damage) {
+    public String getImg() {
+        return img;
+    }
+
+    public void setImg(String img) {
+        this.img = img;
+    }
+    
+    public Pokemon(int id, String name, String img, int level, int health, int damage) {
         this.id = id;
         this.name = name;
+        this.img = img;
         this.level = level;
         this.health = health;
         this.damage = damage;
     }
-    
+
     public int getId() {
         return id;
     }

@@ -55,6 +55,7 @@ public class PokemonDao implements Dao<Pokemon>{
                 listOfPokemon.add(new Pokemon(
                     rs.getInt("id"),
                     rs.getString("name"),
+                    rs.getString("img"),
                     rs.getInt("pokelevel"),
                     rs.getInt("health"),
                     rs.getInt("damage")
