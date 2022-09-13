@@ -43,7 +43,7 @@ public class PokemonController extends HttpServlet{
         // "/rest/" - will depend on your project name (case-sensitive)
         final String URI = req.getRequestURI().replace("/rest/", "");
 
-        setAccessControlHeaders(resp);
+        // setAccessControlHeaders(resp);
 
         //We need to specify that what we are about to give is a JSON information
         resp.setContentType("application/json");
@@ -94,7 +94,7 @@ public class PokemonController extends HttpServlet{
     {
         final String URI = req.getRequestURI().replace("/rest/", "");
 
-        setAccessControlHeaders(resp);
+        // setAccessControlHeaders(resp);
         resp.setContentType("application/json");
 
         switch (URI) {
@@ -123,8 +123,8 @@ public class PokemonController extends HttpServlet{
         }
     }
 
-    private void setAccessControlHeaders(HttpServletResponse resp){
-        resp.setHeader("Access-Control-Allow-Origin", "*");
-        resp.setHeader("Access-Control-Allow-Methods", "GET");
-    }
+    // private void setAccessControlHeaders(HttpServletResponse resp){
+    //     resp.setHeader("Access-Control-Allow-Origin", "*");
+    //     resp.setHeader("Access-Control-Allow-Methods", "GET");
+    // }
 }
