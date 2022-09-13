@@ -14,7 +14,7 @@ public class PokemonDao implements Dao<Pokemon>{
 
     @Override
     public Pokemon addInstance(Pokemon instance) {
-        String sql = "insert into Pokemon(name, pokelevel, health, damage) values(?,?,?,?) returning id";
+        String sql = "insert into Pokemon(name, pokelevel, health, damage, img) values(?,?,?,?,?) returning id";
         try (Connection con = ConnectionUtil.getConnection()) {
             PreparedStatement stmt = con.prepareStatement(sql);
 
@@ -22,6 +22,7 @@ public class PokemonDao implements Dao<Pokemon>{
             stmt.setInt(2, instance.getLevel());
             stmt.setInt(3, instance.getHealth());
             stmt.setInt(4, instance.getDamage());
+            stmt.setString(5, instance.getImg());
 
             ResultSet rs = stmt.executeQuery();
             rs.next();
