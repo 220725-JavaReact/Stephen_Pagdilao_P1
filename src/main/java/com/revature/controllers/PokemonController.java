@@ -47,6 +47,8 @@ public class PokemonController extends HttpServlet{
         resp.setContentType("application/json");
         String jsonString;
 
+        resp.addHeader("Access-Control-Allow-Origin", "*");
+
         switch (URI) {
             case "pokemon":
                 // resp.getWriter().println("I am getting one pokemon");
@@ -91,6 +93,8 @@ public class PokemonController extends HttpServlet{
         throws ServletException, IOException
     {
         final String URI = req.getRequestURI().replace("/rest/", "");
+
+        resp.addHeader("Access-Control-Allow-Origin", "*");
 
         resp.setContentType("application/json");
 
