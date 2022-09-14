@@ -17,7 +17,7 @@
     <url-pattern>/addpokemon</url-pattern>
   </servlet-mapping>
 
-  <!-- <filter>
+  <filter>
     <filter-name>CorsFilter</filter-name>
     <filter-class>org.apache.catalina.filters.CorsFilter</filter-class>
     <init-param>
@@ -53,5 +53,5 @@
     <url-pattern>/rest/pokemon</url-pattern>
     <url-pattern>/rest/allpokemon</url-pattern>
     <url-pattern>/rest/addpokemon</url-pattern>
-  </filter-mapping> -->
+  </filter-mapping>
 </web-app>
