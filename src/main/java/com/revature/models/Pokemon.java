@@ -8,6 +8,7 @@ public class Pokemon {
     private int level;
     private int health;
     private int damage;
+    private int trainid;
 
     public Pokemon() { }
 
@@ -18,14 +19,23 @@ public class Pokemon {
     public void setImg(String img) {
         this.img = img;
     }
-    
-    public Pokemon(int id, String name, String img, int level, int health, int damage) {
+
+    public Pokemon(int id, String name, String img, int level, int health, int damage, int trainid) {
         this.id = id;
         this.name = name;
         this.img = img;
         this.level = level;
         this.health = health;
         this.damage = damage;
+        this.trainid = trainid;
+    }
+
+    public int getTrainid() {
+        return trainid;
+    }
+
+    public void setTrainid(int trainid) {
+        this.trainid = trainid;
     }
 
     public int getId() {

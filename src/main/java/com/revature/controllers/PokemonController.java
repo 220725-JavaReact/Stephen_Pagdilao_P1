@@ -11,12 +11,16 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.revature.dao.PokemonDao;
+import com.revature.dao.UserDao;
 import com.revature.models.Pokemon;
+import com.revature.models.User;
 import com.revature.services.PokemonService;
+import com.revature.services.UserService;
 
 public class PokemonController extends HttpServlet{
     
     private static PokemonService pokeserv = new PokemonService(new PokemonDao());
+    private static UserService userserv = new UserService(new UserDao(), new PokemonDao());
     private static ObjectMapper objmap = new ObjectMapper();
 
     /**
@@ -48,11 +52,11 @@ public class PokemonController extends HttpServlet{
         //We need to specify that what we are about to give is a JSON information
         resp.setContentType("application/json");
         String jsonString;
+        Integer id = 0;
 
         switch (URI) {
             case "pokemon":
                 // resp.getWriter().println("I am getting one pokemon");
-                Integer id = 0;
 
                 try {
                     id = Integer.parseInt(req.getParameter("id"));
@@ -75,6 +79,16 @@ public class PokemonController extends HttpServlet{
                 List<Pokemon> listOfPoke = pokeserv.getAllPokemon();
 
                 jsonString = objmap.writeValueAsString(listOfPoke);
+
+                resp.getWriter().println(jsonString);
+
+                break;
+            case "getUserPokemon":
+                id = Integer.parseInt(req.getParameter("id"));
+
+                User foundUser = userserv.getUserPokemon(id);
+
+                jsonString = objmap.writeValueAsString(foundUser);
 
                 resp.getWriter().println(jsonString);
 

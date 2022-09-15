@@ -59,7 +59,8 @@ public class PokemonDao implements Dao<Pokemon>{
                     rs.getString("img"),
                     rs.getInt("pokelevel"),
                     rs.getInt("health"),
-                    rs.getInt("damage")
+                    rs.getInt("damage"),
+                    rs.getInt("trainid")
                 ));
             }
 
