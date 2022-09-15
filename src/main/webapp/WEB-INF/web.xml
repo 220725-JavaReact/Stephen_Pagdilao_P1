@@ -15,6 +15,7 @@
     <url-pattern>/pokemon</url-pattern>
     <url-pattern>/allpokemon</url-pattern>
     <url-pattern>/addpokemon</url-pattern>
+    <url-pattern>/getUserPokemon</url-pattern>
   </servlet-mapping>
 
   <filter>
@@ -50,8 +51,10 @@
     <url-pattern>/pokemon</url-pattern>
     <url-pattern>/allpokemon</url-pattern>
     <url-pattern>/addpokemon</url-pattern>
+    <url-pattern>/getUserPokemon</url-pattern>
     <url-pattern>/rest/pokemon</url-pattern>
     <url-pattern>/rest/allpokemon</url-pattern>
     <url-pattern>/rest/addpokemon</url-pattern>
+    <url-pattern>/rest/getUserPokemon</url-pattern>
   </filter-mapping>
 </web-app>
